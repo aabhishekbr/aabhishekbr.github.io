@@ -50,5 +50,5 @@ A seasoned Software Development Engineer in Test (SDET) with 9 years of hands-on
   
   </table>
 
- [Email](aabhishekbr@gmail.com) &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/aabhishekbr/) &nbsp;|&nbsp;[Contact](+919019605517)
+ 
 
