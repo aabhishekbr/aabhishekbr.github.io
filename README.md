@@ -44,11 +44,11 @@ A seasoned Software Development Engineer in Test (SDET) with 9 years of hands-on
         <td>Defect Management:  </td>
         <td>Bugzilla, Jira,Asana</td>
   </tr>
-
+</table>
   
           
   
-  </table>
+ 
 
  
 
