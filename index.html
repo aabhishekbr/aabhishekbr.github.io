@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Roy | Senior SDET & QA Automation Architect</title>
+  <meta name="description" content="Portfolio of Abhishek Roy, a seasoned Software Development Engineer in Test (SDET) with 9+ years of experience specializing in Selenium, Java, Python, and CI/CD pipelines.">
+  <meta name="keywords" content="SDET, QA Automation, Selenium, TestNG, Java, Python, Postman, Jenkins, CI/CD, Abhishek Roy, QA Engineer, Automation Architect">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abhishek Roy | Senior SDET & QA Automation Architect">
+  <meta property="og:description" content="9+ years of hands-on experience in quality assurance, specializing in automation testing, robust frameworks, and DevSecOps pipelines.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Particle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Header Navigation -->
+  <header id="header">
+    <nav class="navbar">
+      <a href="#home" class="logo" id="nav-logo">
+        ROY<span class="gradient-text">.SDET</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-item active" id="link-home">Home</a></li>
+        <li><a href="#about" class="nav-item" id="link-about">About</a></li>
+        <li><a href="#skills" class="nav-item" id="link-skills">Skills</a></li>
+        <li><a href="#sandbox" class="nav-item" id="link-sandbox">Interactive QA</a></li>
+        <li><a href="#experience" class="nav-item" id="link-experience">Experience</a></li>
+        <li><a href="#contact" class="nav-item" id="link-contact">Contact</a></li>
+      </ul>
+
+      <div class="system-status" id="status-pill">
+        <span class="status-dot"></span>
+        <span id="status-text">SYSTEM ACTIVE // 100% PASS</span>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Quality Assurance Specialist</span>
+          <h1 id="hero-title">Abhishek Roy</h1>
+          
+          <div class="typewriter-container">
+            <span class="typewriter-text" id="typewriter"></span>
+          </div>
+          
+          <p class="hero-desc">
+            A seasoned Software Development Engineer in Test (SDET) with 9+ years of hands-on expertise in building scalable, robust automation testing frameworks that guarantee high-velocity and premium quality software delivery.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#sandbox" class="btn-primary" id="btn-explore-sandbox">
+              <span>Execute Sandbox</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </a>
+            <a href="#contact" class="btn-secondary" id="btn-get-touch">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item" id="stat-years">
+              <div class="stat-number gradient-text">9+</div>
+              <div class="stat-label">Years Exp</div>
+            </div>
+            <div class="stat-item" id="stat-pass">
+              <div class="stat-number gradient-text">99.9%</div>
+              <div class="stat-label">Pass Rate</div>
+            </div>
+            <div class="stat-item" id="stat-pipelines">
+              <div class="stat-number gradient-text">50+</div>
+              <div class="stat-label">CI Pipelines</div>
+            </div>
+            <div class="stat-item" id="stat-cases">
+              <div class="stat-number gradient-text">10k+</div>
+              <div class="stat-label">Tests Written</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="cyber-frame">
+            <div class="cyber-decor decor-tl"></div>
+            <div class="cyber-decor decor-tr"></div>
+            <div class="cyber-decor decor-bl"></div>
+            <div class="cyber-decor decor-br"></div>
+            <div class="cyber-frame-inner">
+              <img src="https://github.com/user-attachments/assets/181bf338-41c1-40f0-941e-d90d378f5a31" alt="Abhishek Roy SDET" class="profile-img" id="profile-pic">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header">
+        <span class="subtitle">My Story & Values</span>
+        <h2>QA Philosophy</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="about-tabs">
+            <button class="tab-btn active" id="tab-philosophy" onclick="switchAboutTab('philosophy')">Philosophy</button>
+            <button class="tab-btn" id="tab-strengths" onclick="switchAboutTab('strengths')">Core Strengths</button>
+            <button class="tab-btn" id="tab-vision" onclick="switchAboutTab('vision')">QA Vision</button>
+          </div>
+
+          <div class="tab-content active" id="content-philosophy">
+            <h3>Building Trust in Code</h3>
+            <p>
+              I believe automation isn't just about making tests run fast; it's about engineering quality into the core development life cycle. By shifting left, we discover vulnerabilities early, minimize manual debt, and establish high-fidelity deployment confidence.
+            </p>
+            <p>
+              Collaborating across engineering stacks, I design frameworks that developers love to use, making quality a collaborative standard rather than a final gatekeeper.
+            </p>
+          </div>
+
+          <div class="tab-content" id="content-strengths">
+            <h3>Framework Engineering</h3>
+            <p>
+              My expertise centers around standardizing complex automated flows. I focus heavily on component-driven, maintainable code architectures, ensuring tests don't break on minor HTML adjustments.
+            </p>
+            <p>
+              With custom Selenium layers, high-efficiency mock networks, and automated visual regression checks, I build testing ecosystems that scale alongside rapid enterprise features.
+            </p>
+          </div>
+
+          <div class="tab-content" id="content-vision">
+            <h3>The Autonomous Pipeline</h3>
+            <p>
+              My vision is to establish absolute continuous validation. From the moment code is committed, it runs through micro-feedback loops of functional, integration, API, and compliance checkers.
+            </p>
+            <p>
+              Integrating DevSecOps metrics, automated dashboards, and self-healing test pipelines represents the ultimate frontier of modern product engineering reliability.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <p>
+            I am a quality-oriented technical lead who leverages Java and Python ecosystems to create end-to-end continuous validation pipelines. Over my 9-year tenure, I have configured and maintained distributed automation suites that significantly reduce regression overhead and foster confidence in software delivery.
+          </p>
+
+          <div class="qa-philosophy-grid">
+            <div class="philosophy-card" id="card-shift-left">
+              <div class="philosophy-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </div>
+              <h4>Shift-Left Strategy</h4>
+              <p>Catching issues in functional specifications and unit stages before they ever impact staging.</p>
+            </div>
+
+            <div class="philosophy-card" id="card-ci-cd">
+              <div class="philosophy-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </div>
+              <h4>CI/CD Integration</h4>
+              <p>Coupling automation suites directly with Jenkins & GitLab pipelines to block unstable builds instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Arsenal (Skills) -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="subtitle">Technical Stack</span>
+        <h2>Technical Arsenal</h2>
+      </div>
+
+      <div class="skills-container">
+        <!-- Automation Frameworks -->
+        <div class="skill-card" id="skill-group-frameworks">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3>Automation Frameworks</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Selenium WebDriver</span>
+                <span class="skill-percentage" id="skill-pct-selenium">95%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">TestNG</span>
+                <span class="skill-percentage" id="skill-pct-testng">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JUnit</span>
+                <span class="skill-percentage" id="skill-pct-junit">88%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skill-card" id="skill-group-languages">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Java</span>
+                <span class="skill-percentage" id="skill-pct-java">92%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-percentage" id="skill-pct-python">85%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Shell Scripting / Bash</span>
+                <span class="skill-percentage" id="skill-pct-shell">80%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CI/CD Pipelines -->
+        <div class="skill-card" id="skill-group-cicd">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>CI/CD & DevOps</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Jenkins</span>
+                <span class="skill-percentage" id="skill-pct-jenkins">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">GitLab CI/CD</span>
+                <span class="skill-percentage" id="skill-pct-gitlab">88%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Docker (Containerized Testing)</span>
+                <span class="skill-percentage" id="skill-pct-docker">80%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testing Types & Defect Management -->
+        <div class="skill-card" id="skill-group-testing">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3>Methodologies & QA Tools</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Postman & API Testing</span>
+                <span class="skill-percentage" id="skill-pct-api">92%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Agile (Scrum / Kanban)</span>
+                <span class="skill-percentage" id="skill-pct-agile">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Jira / Bugzilla / Asana</span>
+                <span class="skill-percentage" id="skill-pct-defect">95%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-percent="95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QA Test Automation Sandbox (WOW factor) -->
+    <section id="sandbox">
+      <div class="section-header">
+        <span class="subtitle">Interactive Environment</span>
+        <h2>QA Automation Sandbox</h2>
+      </div>
+
+      <div class="sandbox-wrapper">
+        <div class="sandbox-left">
+          <div class="sandbox-desc">
+            <h3>Simulated Test Dashboard</h3>
+            <p>
+              Execute real-time mock automation suites directly on my portfolio. Watch how Selenium, Postman API, and Load scripts operate in a live-compiled environment.
+            </p>
+          </div>
+
+          <div class="sandbox-controls">
+            <div class="test-selection-panel">
+              <label for="suite-selector">Select Test Suite</label>
+              <div class="select-wrapper">
+                <select id="suite-selector">
+                  <option value="e2e-web">E2E Web Suite (Selenium + TestNG)</option>
+                  <option value="api-regression">API Validation Suite (Postman + JUnit)</option>
+                  <option value="load-test">Performance Suite (Python + Locust Mock)</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn-primary" id="run-suite-btn" onclick="startSimulatedSuite()">
+              <span id="btn-run-text">Run Suite</span>
+              <svg id="run-btn-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+          </div>
+
+          <!-- Dynamic SVG Radial progress ring & statistics grid -->
+          <div class="sandbox-stats-grid">
+            <div class="sandbox-stat-card">
+              <div class="sandbox-stat-val passed-val" id="stat-passed">0</div>
+              <span>Passed</span>
+            </div>
+            <div class="sandbox-stat-card">
+              <div class="sandbox-stat-val failed-val" id="stat-failed">0</div>
+              <span>Failed</span>
+            </div>
+            <div class="sandbox-stat-card">
+              <div class="sandbox-stat-val duration-val" id="stat-duration">0.0s</div>
+              <span>Duration</span>
+            </div>
+          </div>
+
+          <div class="dashboard-metrics-container">
+            <div class="circle-progress-wrapper">
+              <svg class="circle-svg">
+                <defs>
+                  <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#06b6d4" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                  </linearGradient>
+                </defs>
+                <circle class="circle-bg" cx="70" cy="70" r="60"></circle>
+                <circle class="circle-fill" id="circular-progress" cx="70" cy="70" r="60"></circle>
+              </svg>
+              <div class="circle-percent-text">
+                <div class="percent-num" id="percentage-label">0%</div>
+                <div class="percent-lbl">Complete</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mock IDE/Console Panel -->
+        <div class="console-panel">
+          <div class="console-header">
+            <div class="console-actions">
+              <div class="console-dot dot-red"></div>
+              <div class="console-dot dot-yellow"></div>
+              <div class="console-dot dot-green"></div>
+            </div>
+            <div class="console-title" id="console-header-title">automation_runner.log</div>
+            <div style="width: 44px"></div>
+          </div>
+
+          <div class="console-body" id="console-body">
+            <div class="log-line log-info">[INFO] 2026-06-01: System initialized. Select a test suite and click 'Run Suite' to begin...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="subtitle">Employment History</span>
+        <h2>Professional Journey</h2>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- Item 1: Lead SDET -->
+        <div class="timeline-item" id="exp-lead">
+          <div class="timeline-badge"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 - Present</span>
+            <h3>Lead QA Automation Architect (SDET)</h3>
+            <div class="timeline-company">Enterprise Web Applications & API Platforms</div>
+            <ul class="timeline-details">
+              <li>Designed modular hybrid Page Object Model (POM) testing structures reducing test script lines of code by 35%.</li>
+              <li>Reconstructed GitLab CI/CD container integration stages resulting in immediate developer check-in quality validation.</li>
+              <li>Spearheaded automation coverage expansion from 40% to 92% across highly complex functional business applications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2: Senior Automation Engineer -->
+        <div class="timeline-item" id="exp-senior">
+          <div class="timeline-badge"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2018 - 2021</span>
+            <h3>Senior QA Automation Engineer</h3>
+            <div class="timeline-company">Financial Systems / E-Commerce Operations</div>
+            <ul class="timeline-details">
+              <li>Configured distributed test networks utilizing Selenium Grid, resolving critical UI bottlenecks across multi-browser variations.</li>
+              <li>Created API testing harnesses in Postman and RestAssured executing functional and schema sanity integrations in under 5 minutes.</li>
+              <li>Trained and mentored 10+ junior manual engineers to transition successfully into automation roles.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3: QA Automation Engineer -->
+        <div class="timeline-item" id="exp-mid">
+          <div class="timeline-badge"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2017 - 2018</span>
+            <h3>QA Automation Engineer</h3>
+            <div class="timeline-company">Mobile Integrations & Client Services</div>
+            <ul class="timeline-details">
+              <li>Integrated Python and Selenium automation layers capturing visual regressions and interface deviations dynamically.</li>
+              <li>Collaborated deeply with Product Managers inside Scrum boards to prioritize regressions and smoke validations.</li>
+              <li>Decreased final release cycle delivery delays by 2 days through rapid and precise overnight smoke suite executions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 4: QA Specialist -->
+        <div class="timeline-item" id="exp-junior">
+          <div class="timeline-badge"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2016 - 2017</span>
+            <h3>Software QA Specialist</h3>
+            <div class="timeline-company">Cloud Technology Services</div>
+            <ul class="timeline-details">
+              <li>Designed precise bug reproduction protocols in Jira and Bugzilla, boosting team patch deployments by 20%.</li>
+              <li>Analyzed backend databases directly utilizing advanced SQL procedures to validate integrity and logic processing.</li>
+              <li>Conducted exploratory functional audits across fresh builds, providing invaluable initial release stability logs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="subtitle">Connect With Me</span>
+        <h2>Get In Touch</h2>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div>
+            <h3>Let's build reliable code.</h3>
+            <p>
+              Looking to improve framework reliability, pipeline speeds, or secure comprehensive QA validation architectures? Reach out, and let's optimize your delivery stack!
+            </p>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-item" id="contact-email">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>abhishek.roy.sdet@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-location">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>India // Remote Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="portfolio-contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <input type="text" id="form-name" placeholder=" " required>
+              <label for="form-name">Full Name</label>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="form-email" placeholder=" " required>
+              <label for="form-email">Email Address</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="form-subject" placeholder=" " required>
+              <label for="form-subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="form-message" placeholder=" " required></textarea>
+              <label for="form-message">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn-primary" id="form-submit-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+
+          <!-- Interactive validation compilation log box -->
+          <div class="contact-console-log" id="contact-console-log">
+            <span class="log-info">[INFO] Compiling contact_form_validator.py...</span><br>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <a href="#home" class="logo">
+        ROY<span class="gradient-text">.SDET</span>
+      </a>
+
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Abhishek Roy. Engineered with HTML, Vanilla CSS & JavaScript. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
