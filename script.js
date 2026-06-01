@@ -32,11 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSkillProgressAnimation();
   initNavbarActiveLinkTracker();
 
-  // Bind contact form submit programmatically
-  const contactForm = document.getElementById("portfolio-contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", handleFormSubmit);
-  }
+
 });
 
 // 1. Navigation Scroll Styling
@@ -378,54 +374,4 @@ function startSimulatedSuite() {
   }, 180);
 }
 
-// 9. Premium form submission pipeline
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const form = document.getElementById("portfolio-contact-form");
-  const logBox = document.getElementById("contact-console-log");
-  const submitBtn = document.getElementById("form-submit-btn");
 
-  const name = document.getElementById("form-name").value;
-  const email = document.getElementById("form-email").value;
-  const subject = document.getElementById("form-subject").value;
-  const msg = document.getElementById("form-message").value;
-
-  logBox.style.display = "block";
-  logBox.innerHTML = "<span class='log-info'>[INFO] Compiling contact_form_validator.py...</span><br>";
-  submitBtn.disabled = true;
-  submitBtn.style.opacity = "0.6";
-
-  const submissionSteps = [
-    { text: "[INFO] Parsing payload...", type: "info" },
-    { text: `[INFO] Validating fields (name: '${name}', email: '${email}')`, type: "info" },
-    { text: "[PASS] Email syntax check complete.", type: "success" },
-    { text: "[INFO] Compiling message bytes buffer...", type: "info" },
-    { text: "[INFO] Launching outbound POST pipeline...", type: "info" },
-    { text: "[PASS] Server response: 200 OK. Message queued.", type: "success" },
-    { text: "[SUCCESS] contact_test_suite.py: 100% assertions PASSED! Message Sent.", type: "success" }
-  ];
-
-  let step = 0;
-  const formTimer = setInterval(() => {
-    if (step >= submissionSteps.length) {
-      clearInterval(formTimer);
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = "1";
-      
-      // Trigger real email composer client redirect with prefilled parameters
-      const mailtoUrl = `mailto:aabhishekbr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " <" + email + ">\n\n" + msg)}`;
-      window.location.href = mailtoUrl;
-
-      form.reset();
-      setTimeout(() => {
-        logBox.style.display = "none";
-      }, 6000);
-      return;
-    }
-
-    const currentLine = submissionSteps[step];
-    logBox.innerHTML += `<span class="log-${currentLine.type}">${currentLine.text}</span><br>`;
-    logBox.scrollTop = logBox.scrollHeight;
-    step++;
-  }, 350);
-}
