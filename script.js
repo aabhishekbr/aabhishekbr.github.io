@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initTypewriter();
   initSkillProgressAnimation();
   initNavbarActiveLinkTracker();
+
+  // Bind contact form submit programmatically
+  const contactForm = document.getElementById("portfolio-contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", handleFormSubmit);
+  }
 });
 
 // 1. Navigation Scroll Styling
@@ -405,10 +411,15 @@ function handleFormSubmit(event) {
       clearInterval(formTimer);
       submitBtn.disabled = false;
       submitBtn.style.opacity = "1";
+      
+      // Trigger real email composer client redirect with prefilled parameters
+      const mailtoUrl = `mailto:aabhishekbr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " <" + email + ">\n\n" + msg)}`;
+      window.location.href = mailtoUrl;
+
       form.reset();
       setTimeout(() => {
         logBox.style.display = "none";
-      }, 5000);
+      }, 6000);
       return;
     }
 
