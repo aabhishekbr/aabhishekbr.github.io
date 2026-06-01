@@ -1503,3 +1503,68 @@ footer {
   font-family: 'Fira Code', monospace;
   font-weight: 500;
 }
+
+/* Mobile-Friendly Layout Optimization Overrides */
+@media (max-width: 768px) {
+  .contact-container, .sandbox-wrapper, .about-left {
+    padding: 24px 16px;
+    border-radius: 18px;
+  }
+  .typewriter-container {
+    font-size: 1.15rem;
+    min-height: 28px;
+    margin-bottom: 15px;
+  }
+  .hero-motto-block {
+    font-size: 0.95rem;
+    margin: 10px 0 20px;
+  }
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  .about-right p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .system-status {
+    display: none; /* Keep navbar clean on compact viewports */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    grid-template-columns: 1fr 1fr !important; /* Retain efficient two-column grid on mobile */
+    gap: 10px;
+  }
+  .stat-item {
+    padding: 12px;
+  }
+  .stat-number {
+    font-size: 1.7rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  .sandbox-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  #run-suite-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-tabs {
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
