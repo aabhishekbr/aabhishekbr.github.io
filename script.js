@@ -17,7 +17,7 @@ const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext("2d");
 let particles = [];
 const particleCount = 65;
-const connectionDistance = 110;
+const connectionDistance = 85;
 
 // QA Simulator State
 let runningSim = false;
