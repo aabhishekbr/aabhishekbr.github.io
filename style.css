@@ -1446,3 +1446,60 @@ footer {
     height: 260px;
   }
 }
+
+/* LinkedIn Integration Added Styles */
+.hero-motto-block {
+  margin: 15px 0 25px;
+  padding-left: 15px;
+  border-left: 3px solid var(--accent-cyan);
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.about-edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.edu-item {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-color);
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+.edu-degree {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: block;
+  color: var(--accent-cyan);
+}
+
+.edu-inst {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 4px;
+}
+
+.certs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cert-badge {
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  color: var(--accent-violet);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+}

@@ -3,10 +3,10 @@ let typewriterIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const roles = [
+  "Quality Engineering Manager",
   "Software Development Engineer in Test",
-  "Automation Architect",
-  "CI/CD Pipeline Specialist",
-  "Quality Assurance Engineer"
+  "Data QA & ETL Specialist",
+  "Automation Framework Architect"
 ];
 const typingSpeed = 100;
 const deletingSpeed = 50;
@@ -311,22 +311,23 @@ function startSimulatedSuite() {
       { text: "[PASS] Session cleared. Token revoked.", type: "success", passes: 5, fails: 1, time: 1.5 },
       { text: "[SUCCESS] [SUITE END] API Suite execution concluded.", type: "warning", passes: 5, fails: 1, time: 1.7 }
     ];
-  } else if (selectedSuite === "load-test") {
-    consoleTitle.textContent = "locust_load_test.log";
+  } else if (selectedSuite === "data-etl") {
+    consoleTitle.textContent = "spark_etl_pipeline.log";
     logSteps = [
-      { text: "[INFO] 2026-06-01 08:30:00 - Initializing simulated Locust worker instances...", type: "info" },
-      { text: "[INFO] Target Host: https://load.enterprise.app", type: "info" },
-      { text: "[INFO] Ramping up user swarm rate: 10 users/sec up to maximum 100...", type: "info" },
-      { text: "[PASS] Swarm active. 20 virtual users simulated.", type: "success", passes: 5, fails: 0, time: 0.3 },
-      { text: "[INFO] HTTP Requests active. Current RPS: 84. Average Latency: 92ms.", type: "info" },
-      { text: "[PASS] 50 virtual users simulated. Latency stable.", type: "success", passes: 15, fails: 0, time: 0.8 },
-      { text: "[INFO] Swarming threshold reached. 100 virtual users simulated.", type: "info" },
-      { text: "[INFO] Current RPS: 412. Average Response Time: 120ms.", type: "info" },
-      { text: "[FAIL] HTTP 503 Service Unavailable encountered at /reports/download", type: "error", passes: 15, fails: 1, time: 1.4 },
-      { text: "[WARN] Latency spike detected: 980ms latency observed.", type: "warning" },
-      { text: "[PASS] 100 users active. Database connections recovered.", type: "success", passes: 35, fails: 1, time: 2.1 },
-      { text: "[INFO] Swarm cooldown initiated. Releasing virtual workers...", type: "info" },
-      { text: "[SUCCESS] [SUITE END] Load simulation completed successfully.", type: "success", passes: 35, fails: 1, time: 2.5 }
+      { text: "[INFO] 2026-06-01 08:30:00 - Initializing Apache Spark driver context...", type: "info" },
+      { text: "[INFO] Configuring Spark session parameters: executorMemory=8g, driverMemory=4g", type: "info" },
+      { text: "[INFO] Reading input data source parquet files from s3://agoda-data-lake/inbound/...", type: "info" },
+      { text: "[PASS] Parquet metadata parsed successfully. Schema mapping matches expectation.", type: "success", passes: 1, fails: 0, time: 0.3 },
+      { text: "[INFO] Launching Spark SQL ETL Job: transform_bookings_metrics...", type: "info" },
+      { text: "[INFO] Processing 1,500,000 transaction row offsets...", type: "info" },
+      { text: "[WARN] SparkExecutorNode 3 reported memory pressure (garbage collection overhead)", type: "warning" },
+      { text: "[PASS] ETL mapping transform completed. Temporary views generated.", type: "success", passes: 2, fails: 0, time: 0.9 },
+      { text: "[INFO] Verifying metrics: aggregate_tax_validation and gross_total_calculations...", type: "info" },
+      { text: "[FAIL] DataAnomaly: Gross total mismatches tax metrics: expected 150.00 but got 148.50 on Row ID: AG-90210", type: "error", passes: 2, fails: 1, time: 1.5 },
+      { text: "[INFO] Initiating schema validation checks on relational model keys...", type: "info" },
+      { text: "[PASS] Spark DataFrames verified. Anomalies logged and dispatched to Metabase.", type: "success", passes: 3, fails: 1, time: 2.1 },
+      { text: "[INFO] Releasing Apache Spark driver connections and cluster workers...", type: "info" },
+      { text: "[SUCCESS] [ETL COMPLETED] data-etl validation executed successfully.", type: "success", passes: 3, fails: 1, time: 2.5 }
     ];
   }
 
